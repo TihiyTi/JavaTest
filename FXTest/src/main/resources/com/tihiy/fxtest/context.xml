@@ -3,17 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="mc" class="com.tihiy.fxtest">
-
+    <bean id="mc" class="com.tihiy.fxtest.Controller"/>
+    <bean id="label" class="javafx.beans.property.SimpleStringProperty">
     </bean>
 </beans>
 
 
 
-<context:annotation-config/>
-
-<bean id="mc" class="com.ak.fx.desktop.controller.Controller">
-    <property name="text" value="Something text"/>
-</bean>
-<bean class="com.ak.fx.desktop.view.SimpleViewController"/>
-</beans>

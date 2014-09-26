@@ -21,7 +21,9 @@
 </padding>
 <center>
     <FlowPane fx:id="pane" alignment="CENTER">
+
         <Button fx:id="button" text="Button"/>
+        <Label fx:id="label2"/>
         <TextField fx:id="textField"/>
         <Label fx:id="label"/>
         <children>
