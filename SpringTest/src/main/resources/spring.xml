@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="reo_1" class="com.tihiy.springdemo.ReoSignalModel"/>
+
+    <bean id="mainExp" class="com.tihiy.springdemo.Experiment">
+        <constructor-arg  value="My Spring"/>
+        <property name="pulseChannel">
+            <list>
+                <value>pulse_1</value>
+                <value>pulse_2</value>
+                <value>pulse_3</value>
+                <value>pulse_4</value>
+                <value>pulse_5</value>
+            </list>
+        </property>
+        <property name="baseChannel">
+            <list>
+                <value>base_1</value>
+                <value>base_2</value>
+                <value>base_3</value>
+                <value>base_4</value>
+                <value>base_5</value>
+            </list>
+        </property>
+        <property name="first">
+            <list>
+                <value>firstPulse</value>
+                <value>firstBase</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>
