@@ -25,7 +25,7 @@ public class Controller implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("Initialize label "+ label.toString());
+        System.out.println("Controller FX "+ this.toString());
         Bindings.bindBidirectional(label.textProperty(), bufProp1);
         Bindings.bindBidirectional(label2.textProperty(), bufProp1);
         Bindings.bindBidirectional(textField.textProperty(), bufProp1);

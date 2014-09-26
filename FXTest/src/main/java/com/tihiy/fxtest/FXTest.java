@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -37,12 +38,14 @@ public class FXTest extends Application {
             Class clazz = FXTest.class;
             URL location1 = clazz.getResource(SCENE_XML);
             FXMLLoader fxmlLoader = new FXMLLoader(location1);
+            fxmlLoader.setControllerFactory(e -> BeanFactoryUtils.beanOfType(context, e));
             Pane root = fxmlLoader.load();
 
             stage.setScene(new Scene(root));
             stage.show();
 
             Controller mc = (Controller) context.getBean("mc");
+            Controller mc2 = (Controller) context.getBean("mc2");
             StringProperty prop = new SimpleStringProperty();
             mc.setBindProperty(prop);
             prop.addListener((observable, oldValue, newValue) -> System.out.println("TEST COMPLETE!!"));

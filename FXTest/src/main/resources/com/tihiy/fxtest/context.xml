@@ -4,6 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="mc" class="com.tihiy.fxtest.Controller"/>
+    <bean id="mc2" class="com.tihiy.fxtest.Controller"/>
+    <bean id="controller" class="com.tihiy.fxtest.Controller"/>
+
     <bean id="label" class="javafx.beans.property.SimpleStringProperty">
     </bean>
 </beans>
