@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="mc" class="com.tihiy.fxtest.Controller"/>
-    <bean id="mc2" class="com.tihiy.fxtest.Controller"/>
-    <bean id="controller" class="com.tihiy.fxtest.Controller"/>
+    <bean id="param" class="com.tihiy.fxtest.ParamPanelControl"/>
+    <bean class="com.tihiy.fxtest.TabParamControl"/>
 
     <bean id="label" class="javafx.beans.property.SimpleStringProperty">
     </bean>

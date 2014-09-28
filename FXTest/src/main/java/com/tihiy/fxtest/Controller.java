@@ -33,7 +33,6 @@ public class Controller implements Initializable{
 
     public void setBindProperty(StringProperty property){
         Bindings.bindBidirectional(bufProp1, property);
-//        Bindings.bindBidirectional(bufProp2, property);
     }
 
 }

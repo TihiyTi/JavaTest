@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="param" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.tihiy.fxtest.ParamPanelControl">
+  <HBox>
+    <Label text="Label 1" />
+    <TextField fx:id="a"/>
+  </HBox>
+  <HBox>
+    <Label  text="Label 2" />
+    <TextField fx:id="b"/>
+  </HBox>
+  <HBox>
+    <Label  text="Label 3" />
+    <TextField fx:id="ro1"/>
+  </HBox>
+</VBox>

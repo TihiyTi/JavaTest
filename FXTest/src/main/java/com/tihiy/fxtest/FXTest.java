@@ -45,7 +45,6 @@ public class FXTest extends Application {
             stage.show();
 
             Controller mc = (Controller) context.getBean("mc");
-            Controller mc2 = (Controller) context.getBean("mc2");
             StringProperty prop = new SimpleStringProperty();
             mc.setBindProperty(prop);
             prop.addListener((observable, oldValue, newValue) -> System.out.println("TEST COMPLETE!!"));
