@@ -4,6 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="mc" class="com.tihiy.fxtest.Controller"/>
+    <bean id="chartmc1" class="com.tihiy.fxtest.charttest.LineChartController" scope = "prototype"/>
+    <!--<bean id="chartmc2" class="com.tihiy.fxtest.charttest.LineChartController" />-->
     <bean id="param" class="com.tihiy.fxtest.ParamPanelControl"/>
     <bean class="com.tihiy.fxtest.TabParamControl"/>
 

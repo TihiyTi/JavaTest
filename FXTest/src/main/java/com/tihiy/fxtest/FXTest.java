@@ -1,12 +1,17 @@
 package com.tihiy.fxtest;
 
 import com.sun.javafx.css.CssError;
+import com.tihiy.fxtest.charttest.LineChartController;
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
+import javafx.beans.property.ListProperty;
+import javafx.beans.property.SimpleListProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -16,6 +21,8 @@ import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class FXTest extends Application {
@@ -46,6 +53,13 @@ public class FXTest extends Application {
 
             Controller mc = (Controller) context.getBean("mc");
             StringProperty prop = new SimpleStringProperty();
+            List<Double> list = Arrays.asList(1d,34d,53d,23d,23d,43d);
+            ObservableList<Double> observableList = FXCollections.observableList(list);
+            ListProperty<Double> listProperty = new SimpleListProperty<>(observableList);
+            LineChartController chartController = (LineChartController) context.getBean("chartmc1");
+//            LineChartController chartController2 = (LineChartController) context.getBean("chartmc2");
+            chartController.bindList(listProperty);
+//            chartController2.bindList(listProperty);
             mc.setBindProperty(prop);
             prop.addListener((observable, oldValue, newValue) -> System.out.println("TEST COMPLETE!!"));
         }catch (Exception e){
