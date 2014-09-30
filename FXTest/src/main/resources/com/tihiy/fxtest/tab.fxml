@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 
 <TabPane fx:id="tab" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
-        fx:controller="com.tihiy.fxtest.TabParamControl" tabClosingPolicy="UNAVAILABLE">
+        fx:controller="com.tihiy.fxtest.TabParamController" tabClosingPolicy="UNAVAILABLE">
   <tabs>
     <Tab text="1 channel">
       <fx:include fx:id="param" source="param_panel.fxml" />
