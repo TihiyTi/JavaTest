@@ -1,15 +1,19 @@
 package com.tihiy.fxtest;
 
+import com.tihiy.fxtest.charttest.LineChartController;
 import javafx.beans.binding.Bindings;
+import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.LineChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable{
@@ -21,6 +25,10 @@ public class Controller implements Initializable{
     public Label label2;
     public TextField textField;
     public FlowPane pane;
+    public LineChart chartmc1;
+    public LineChart chartmc2;
+    public LineChartController chartmc1Controller;
+    public LineChartController chartmc2Controller;
     public Button button;
 
     @Override
@@ -34,5 +42,8 @@ public class Controller implements Initializable{
     public void setBindProperty(StringProperty property){
         Bindings.bindBidirectional(bufProp1, property);
     }
-
+    public void setBindGraph(List<ListProperty<Double>> listOfListProperty){
+        chartmc1Controller.bindList(listOfListProperty.get(0));
+        chartmc2Controller.bindList(listOfListProperty.get(1));
+    }
 }

@@ -2,6 +2,7 @@ package com.tihiy.fxtest;
 
 import com.sun.javafx.css.CssError;
 import com.tihiy.fxtest.charttest.LineChartController;
+import com.tihiy.fxtest.charttest.MultyChartController;
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.ListProperty;
@@ -54,14 +55,20 @@ public class FXTest extends Application {
             Controller mc = (Controller) context.getBean("mc");
             StringProperty prop = new SimpleStringProperty();
             List<Double> list = Arrays.asList(1d,34d,53d,23d,23d,43d);
+            List<Double> list2 = Arrays.asList(21d,4d,3d,45d,23d,54d);
             ObservableList<Double> observableList = FXCollections.observableList(list);
+            ObservableList<Double> observableList2 = FXCollections.observableList(list2);
             ListProperty<Double> listProperty = new SimpleListProperty<>(observableList);
-            LineChartController chartController = (LineChartController) context.getBean("chartmc1");
-//            LineChartController chartController2 = (LineChartController) context.getBean("chartmc2");
-            chartController.bindList(listProperty);
+            ListProperty<Double> listProperty2 = new SimpleListProperty<>(observableList2);
+
+            mc.setBindGraph(Arrays.asList(listProperty, listProperty2));
 //            chartController2.bindList(listProperty);
             mc.setBindProperty(prop);
             prop.addListener((observable, oldValue, newValue) -> System.out.println("TEST COMPLETE!!"));
+
+            MultyChartController mult = (MultyChartController)context.getBean("mult");
+            mult.setSignals(Arrays.asList(listProperty, listProperty2));
+
         }catch (Exception e){
             System.out.println(e.toString());
             e.printStackTrace();
