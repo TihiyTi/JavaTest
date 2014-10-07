@@ -10,7 +10,4 @@
   <yAxis>
     <NumberAxis fx:id="yAxis" side="LEFT"/>
   </yAxis>
-    <yAxis>
-        <NumberAxis fx:id="yAxis2" side="LEFT"/>
-    </yAxis>
 </LineChart>

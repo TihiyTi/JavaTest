@@ -33,9 +33,9 @@ public class LineChartController implements Initializable, GetID{
         listXProperty.addListener((observable, oldValue, newValue) -> {
             XYChart.Series<Number,Number> series = new XYChart.Series<>();
             series.setName("Data Series 1");
-            newValue.forEach(e -> {
-                series.getData().add(new XYChart.Data<>(newValue.indexOf(e), e));
-            });
+            for (int i = 0; i < newValue.size(); i++) {
+                series.getData().add(new XYChart.Data<>(i, newValue.get(i)));
+            }
             chart.getData().add(series);
         });
     }
