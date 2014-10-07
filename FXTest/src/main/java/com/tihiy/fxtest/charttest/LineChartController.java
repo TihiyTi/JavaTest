@@ -16,15 +16,16 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class LineChartController implements Initializable{
+public class LineChartController implements Initializable, GetID{
     public LineChart<Number,Number> chart;
     public NumberAxis xAxis;
     public NumberAxis yAxis;
-
+    public String id;
     ListProperty<Double> listXProperty = new SimpleListProperty<>();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        System.out.println("My ID is " + id+ " @"+ this);
         chart.setTitle("CHARRT");
         xAxis.setLabel("X Axis");
         yAxis.setLabel("Y Axis");
@@ -41,5 +42,11 @@ public class LineChartController implements Initializable{
 
     public void bindList(ListProperty<Double> list){
         listXProperty.bindBidirectional(list);
+    }
+
+    @Override
+    public String getID() {
+        return id;
+//        return null;
     }
 }

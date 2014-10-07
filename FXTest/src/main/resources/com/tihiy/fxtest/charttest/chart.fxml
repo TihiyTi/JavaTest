@@ -2,7 +2,7 @@
 
 <?import javafx.scene.chart.*?>
 
-<LineChart fx:id="chart" id="LineChart" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+<LineChart fx:id="chart" id="TestID" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
         fx:controller="com.tihiy.fxtest.charttest.LineChartController">
   <xAxis>
     <NumberAxis fx:id="xAxis" side="BOTTOM" />
@@ -10,4 +10,7 @@
   <yAxis>
     <NumberAxis fx:id="yAxis" side="LEFT"/>
   </yAxis>
+    <yAxis>
+        <NumberAxis fx:id="yAxis2" side="LEFT"/>
+    </yAxis>
 </LineChart>

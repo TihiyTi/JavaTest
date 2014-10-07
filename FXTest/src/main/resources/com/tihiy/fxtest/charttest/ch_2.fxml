@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Parent?>
+<Parent xmlns:fx="http://java.sun.com/JSP/Page" fx:controller="com.tihiy.fxtest.charttest.Chart2Controller">
+    <fx:include source="chart.fxml"/>
+</Parent>

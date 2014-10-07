@@ -4,8 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="mc" class="com.tihiy.fxtest.Controller"/>
-    <bean id="chartmc1" class="com.tihiy.fxtest.charttest.LineChartController" scope="prototype"/>
-    <bean id="mult" class="com.tihiy.fxtest.charttest.MultyChartController"/>
+    <bean class="com.tihiy.fxtest.charttest.LineChartController" scope="prototype"/>
+    <!--<bean id="chartmc11" class="com.tihiy.fxtest.charttest.LineChartController" />-->
+    <!--<bean id="chartmc22" class="com.tihiy.fxtest.charttest.LineChartController" />-->
+    <!--<bean id="mult" class="com.tihiy.fxtest.charttest.MultyChartController"/>-->
+
 
     <bean id="param" class="com.tihiy.fxtest.ParamPanelControl"/>
     <bean class="com.tihiy.fxtest.TabParamController"/>

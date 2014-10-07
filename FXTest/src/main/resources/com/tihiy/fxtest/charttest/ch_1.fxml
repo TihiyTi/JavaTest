@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<Pane fx:id="ch_1" xmlns:fx="http://java.sun.com/JSP/Page" fx:controller="com.tihiy.fxtest.charttest.Chart1Controller">
+    <fx:include fx:id="ch" source="chart.fxml"/>
+</Pane>

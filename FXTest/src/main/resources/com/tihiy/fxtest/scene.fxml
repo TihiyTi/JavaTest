@@ -6,21 +6,21 @@
 
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
             fx:controller="com.tihiy.fxtest.Controller" >
-  <center>
-    <FlowPane fx:id="pane" alignment="CENTER">
+  <!--<center>-->
+    <!--<FlowPane fx:id="pane" alignment="CENTER">-->
       <!--<Button fx:id="button" text="Button" />-->
-      <Label fx:id="label2" />
-      <TextField fx:id="textField" />
-      <Label fx:id="label" />
+      <!--<Label fx:id="label2" />-->
+      <!--<TextField fx:id="textField" />-->
+      <!--<Label fx:id="label" />-->
       <!--<Label text="MyLabel" />-->
       <!--<fx:include source="my_button.fxml" />-->
-    </FlowPane>
-  </center>
+    <!--</FlowPane>-->
+  <!--</center>-->
   <top>
-    <fx:include source="tab.fxml" />
+    <!--<fx:include source="tab.fxml" />-->
   </top>
   <bottom>
-      <fx:include source="charttest/multy_chart.fxml"/>
+      <!--<fx:include source="charttest/multy_chart.fxml"/>-->
   </bottom>
   <left>
     <fx:include fx:id="chartmc1" source="charttest/chart.fxml"/>

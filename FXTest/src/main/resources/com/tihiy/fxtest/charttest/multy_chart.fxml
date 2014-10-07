@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 <VBox fx:id="vbox" xmlns:fx="http://javafx.com/fxml/1"
           fx:controller="com.tihiy.fxtest.charttest.MultyChartController">
