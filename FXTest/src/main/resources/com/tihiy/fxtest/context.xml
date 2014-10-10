@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="signals" class="com.tihiy.fxtest.charttest.SignalModel"
+            p:signalName="TestSignal" p:sampleFreq="500"/>
+
     <bean id="mc" class="com.tihiy.fxtest.Controller"/>
-    <!--<bean class="com.tihiy.fxtest.charttest.LineChartController" scope="prototype"/>-->
-    <bean id="chartmc11" class="com.tihiy.fxtest.charttest.LineChartController" />
+    <bean id="chartmc11" class="com.tihiy.fxtest.charttest.LineChartController" p:model-ref="signals"/>
     <bean id="chartmc22" class="com.tihiy.fxtest.charttest.LineChartController" />
-    <!--<bean id="mult" class="com.tihiy.fxtest.charttest.MultyChartController"/>-->
 
 
     <bean id="param" class="com.tihiy.fxtest.ParamPanelControl"/>

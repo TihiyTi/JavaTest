@@ -1,6 +1,7 @@
 package com.tihiy.fxtest;
 
 import com.tihiy.fxtest.charttest.LineChartController;
+import com.tihiy.fxtest.charttest.SignalModel;
 import javafx.application.Application;
 import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleListProperty;
@@ -97,7 +98,9 @@ public class FXTest extends Application {
             ObservableList<Double> observableList4 = FXCollections.observableList(list4);
             ListProperty<Double> listProperty3 = new SimpleListProperty<>(observableList3);
             ListProperty<Double> listProperty4 = new SimpleListProperty<>(observableList4);
-            mc1.bindList(listProperty3);
+//            mc1.bindList(listProperty3);
+            SignalModel model = ((SignalModel) context.getBean("signals"));
+            model.setList(list3);
             mc2.bindList(listProperty4);
 
         }catch (Exception e){
