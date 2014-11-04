@@ -7,4 +7,6 @@ include 'MVC'
 include 'Reo'
 include 'SpringTest'
 include 'FXTest'
+include 'FXTest:Mapper'
+
 

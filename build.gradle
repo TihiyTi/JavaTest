@@ -69,3 +69,11 @@ project(':FXTest'){
         compile group: 'org.springframework', name:'spring-context', version:'4.1.0.RELEASE'
     }
 }
+project(':FXTest:Mapper'){
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    dependencies{
+        compile group: 'org.springframework', name:'spring-context', version:'4.1.0.RELEASE'
+    }
+}
