@@ -8,5 +8,6 @@ include 'Reo'
 include 'SpringTest'
 include 'FXTest'
 include 'FXTest:Mapper'
+include 'Mathematica'
 
 
