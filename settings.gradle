@@ -11,3 +11,6 @@ include 'FXTest:Mapper'
 include 'FXTest:Example1'
 include 'FXTest:Example2'
 include 'RegTest'
+include 'Mathematica'
+
+
