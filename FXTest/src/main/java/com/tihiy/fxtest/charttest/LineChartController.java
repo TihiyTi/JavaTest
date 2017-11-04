@@ -2,9 +2,6 @@ package com.tihiy.fxtest.charttest;
 
 import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleListProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
@@ -56,7 +53,7 @@ public class LineChartController extends AbstractSignalController implements Ini
             XYChart.Series<Number,Number> series = new XYChart.Series<>();
             series.setName("Data Series 1");
             for (int i = 0; i < newValue.size(); i++) {
-                series.getData().add(new XYChart.Data<>(i/model.getSampleFreq()., newValue.get(i)));
+//                series.getData().add(new XYChart.Data<>(i/model.getSampleFreq(), newValue.get(i)));
             }
             chart.getData().add(series);
         });
